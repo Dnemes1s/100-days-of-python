@@ -26,3 +26,13 @@ Day 4:
     - Has a part on what to do if the user and computer inputs match
 
 Day 5:
+- Looked at the range element
+- Looked at for 
+- Made a program that will print out all items in a list
+- Made a program that goes through a bunch of numbers and gets the highest
+    - Uses for loop
+- Made a password generator that asks the used how many letters, numbers and symbols they want
+    - Uses lists and the range element
+    - Uses for loops to get from the lists
+    - Uses random library to get random items from the lists
+    - Shuffles all characters around so they are random and not in order
