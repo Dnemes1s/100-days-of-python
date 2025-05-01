@@ -20,16 +20,19 @@ for char in range(1, letters_count + 1):
     password_list.append(random.choice(letters))
     print(password_list)
 # Adding the letters to the password list
+#The (random.choice(letters)) function will choose a random letter from the letters list and add it to the paassword list
 
 for char in range(1, symbols_count + 1):
     password_list.append(random.choice(symbols))
     print(password_list)
 # Adding the symbols to the password list
+#The (random.choice(symbols)) function will choose a random symbol from the symbols list and add it to the paassword list
 
 for char in range(1, numbers_count + 1):
     password_list.append(random.choice(numbers))
     print(password_list)
 # Adding the numbers to the password list
+#The (random.choice(numbers)) function will choose a random number from the numbers list and add it to the paassword list
 
 random.shuffle(password_list)
 print(password_list)
