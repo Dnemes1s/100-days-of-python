@@ -36,3 +36,17 @@ Day 5:
     - Uses for loops to get from the lists
     - Uses random library to get random items from the lists
     - Shuffles all characters around so they are random and not in order
+
+D6:
+- All on line so no files to commit
+- Worked with While and for loops
+- Was a maze game
+
+D7:
+- Hangman game
+- Putting everything together thats been used to far
+    - Random
+    - For loops
+    - While loops
+    - If, elif, else
+    - Lists and altering them
