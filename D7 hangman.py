@@ -21,16 +21,40 @@ print(placeholder)
 print("welcome to the hangman game")
 print("guess the word")
 print("you have 6 lives")
-guess = input("guess a letter: ").lower()
-# Makes all inputs lower case
 
-display = "" 
+game_over = False
+correct_letters = []
+incorrect_letters = []
 
-for letter in word:
-    if letter == guess:
-        display += letter
-    else:
-        display += "_"
+while not game_over:
+    guess = input("guess a letter: \n").lower()
+    # Makes all inputs lower case
 
-print(display)
+    display = "" 
 
+    
+    for letter in word:
+        
+        if letter == guess:
+            display += letter
+            correct_letters.append(letter)
+
+        elif letter in correct_letters:
+            display += letter    
+        else:
+            display += "_"
+            
+            
+    if guess not in correct_letters:
+        lives -= 1
+        incorrect_letters.append(guess)
+        
+
+    print(f"Incorrect letters: {", ".join(incorrect_letters)}")
+    print(display)
+    print(f"You have {lives} lives remaining\n")
+
+    if "_" not in display:
+
+        game_over = True
+        print("You win")
