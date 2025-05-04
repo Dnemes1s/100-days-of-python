@@ -2,10 +2,66 @@ import random
 
 words = ["python", "java", "javascript", "html", "css"]
 # list of words
-lives = 6
+lives = 7
 # number of lives
 word = random.choice(words)
 # choosing a random word from the list
+hangman_counter =-1
+# Counter to go through hangman pics
+
+# ascii art for hangman
+hangmanpics = ['''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========''',
+""]
+
 
 print(word)
 
@@ -39,6 +95,7 @@ while not game_over:
             display += letter
             correct_letters.append(letter)
 
+
         elif letter in correct_letters:
             display += letter    
         else:
@@ -48,9 +105,14 @@ while not game_over:
     if guess not in correct_letters:
         lives -= 1
         incorrect_letters.append(guess)
+        hangman_counter += 1
+
+    if lives == 0:
+        game_over = True
         
 
     print(f"Incorrect letters: {", ".join(incorrect_letters)}")
+    print(hangmanpics[hangman_counter])
     print(display)
     print(f"You have {lives} lives remaining\n")
 
@@ -58,3 +120,4 @@ while not game_over:
 
         game_over = True
         print("You win")
+print("You lose")
