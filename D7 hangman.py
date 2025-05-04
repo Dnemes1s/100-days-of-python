@@ -49,7 +49,7 @@ hangmanpics = ['''
   +---+
   |   |
   O   |
- /|\  |
+ //|\  |
  /    |
       |
 =========''', '''
@@ -109,6 +109,7 @@ while not game_over:
 
     if lives == 0:
         game_over = True    # Changes the game state to escape the loop if the users lives are 0
+        print("You lose")
         
 
     print(f"Incorrect letters: {", ".join(incorrect_letters)}") # Prints out the letters user has guessed thats wrong
@@ -122,5 +123,5 @@ while not game_over:
         print("You win")
         # Game win state. Tests to see if there are any _ in the display var. If none it ends the game and player wins
 
+print("Try again")
 
-print("You lose")
