@@ -78,7 +78,7 @@ print("welcome to the hangman game")
 print("guess the word")
 print("you have 6 lives")
 
-game_over = False
+game_over = False   # Game state
 correct_letters = []
 incorrect_letters = []
 
@@ -89,11 +89,11 @@ while not game_over:
     display = "" 
 
     
-    for letter in word:
+    for letter in word: 
         
         if letter == guess:
-            display += letter
-            correct_letters.append(letter)
+            display += letter   
+            correct_letters.append(letter)  
 
 
         elif letter in correct_letters:
@@ -104,20 +104,23 @@ while not game_over:
             
     if guess not in correct_letters:
         lives -= 1
-        incorrect_letters.append(guess)
-        hangman_counter += 1
+        incorrect_letters.append(guess) # Adds wrong guessed letters into a var
+        hangman_counter += 1    # Iterates the hangman ascii depending on remaining lives
 
     if lives == 0:
-        game_over = True
+        game_over = True    # Changes the game state to escape the loop if the users lives are 0
         
 
-    print(f"Incorrect letters: {", ".join(incorrect_letters)}")
-    print(hangmanpics[hangman_counter])
-    print(display)
-    print(f"You have {lives} lives remaining\n")
+    print(f"Incorrect letters: {", ".join(incorrect_letters)}") # Prints out the letters user has guessed thats wrong
+    print(hangmanpics[hangman_counter]) # Displays hangman state
+    print(display) # Displays word
+    print(f"You have {lives} lives remaining\n") # Displays lives
 
     if "_" not in display:
 
         game_over = True
         print("You win")
+        # Game win state. Tests to see if there are any _ in the display var. If none it ends the game and player wins
+
+
 print("You lose")
