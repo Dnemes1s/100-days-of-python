@@ -35,35 +35,33 @@ hangmanpics = ['''
   +---+
   |   |
   O   |
- /|   |
+ ||   |
       |
       |
 =========''', '''
   +---+
   |   |
   O   |
- /|\  |
+ |||  |
       |
       |
 =========''', '''
   +---+
   |   |
   O   |
- //|\  |
- /    |
+ |||  |
+ |    |
       |
 =========''', '''
   +---+
   |   |
   O   |
- /|\  |
- / \  |
+ |||  |
+ | |  |
       |
 =========''',
 ""]
 
-
-print(word)
 
 # Using the variable above that got the length of the word, repalces it with underscores so the user cant see the chosen word
 placeholder = ""
