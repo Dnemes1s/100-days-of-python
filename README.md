@@ -50,3 +50,7 @@ D7:
     - While loops
     - If, elif, else
     - Lists and altering them
+
+D8:
+- Working with functions
+- 
