@@ -34,6 +34,7 @@ encode_or_decode = input("Do you want to encode or decode ? (Type 'encode' or 'd
 # word = input("Input a word or phrase: ")
 # shift = int(input("Input the shift: "))
 idk = []
+valid = True
 
 if encode_or_decode == "encode":
     word = input("Input a word or phrase: ")
@@ -44,9 +45,8 @@ if encode_or_decode == "decode":
     word = input("Input a word or phrase: ")
     shift = int(input("Input the shift: "))
     decode(word, shift)
+    
 
-else:
-    print("you have entered something invalid. Good bye")     
 
 poo = "".join(idk)
 print(poo)
