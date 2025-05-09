@@ -1,4 +1,5 @@
 # This is an application that runs as a silent auction
+import os
 
 print("Welcome to the silent auction")
 print("We will now take the first bid")
@@ -11,6 +12,7 @@ while auction_state:
     bidder_name = str(input("Bidder name: "))
     new_bid = int(input("Bid price: "))
     more_bidder = input("Are there more bidders ?(y/n)").lower()    # Checks if there are more bidders
+    os.system('cls||clear')
     
     if new_bid > highest_bid:   # Checks if the latest bid is higher than the previous one 
         highest_bid = new_bid   # Updates the highest
