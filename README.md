@@ -53,4 +53,9 @@ D7:
 
 D8:
 - Working with functions
-- 
+- Made a ceaser cypher that calls one of 2 functions. Either encode or decode
+    - Making functions and calling them
+    - Making the program loop till user doesnt want to encode or decode anymore
+
+D9:
+- Working with dictionaries
