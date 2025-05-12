@@ -10,7 +10,7 @@ highest_bid_name = ""   # Keeps the name of the highest bidder
 
 while auction_state:
     bidder_name = str(input("Bidder name: "))
-    new_bid = int(input("Bid price: "))
+    new_bid = int(input("Bid price: $ "))
     more_bidder = input("Are there more bidders ?(y/n)").lower()    # Checks if there are more bidders
     os.system('cls||clear')
     
