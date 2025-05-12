@@ -59,3 +59,4 @@ D8:
 
 D9:
 - Working with dictionaries
+- Nested lists and dictionaries
