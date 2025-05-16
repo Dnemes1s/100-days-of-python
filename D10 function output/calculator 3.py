@@ -37,3 +37,5 @@ def calculator():
             should_accumulate = False
             print("\n" * 20)
             calculator()
+
+calculator()
