@@ -9,3 +9,5 @@ def format_name(f_name, l_name):
   
 
 print(format_name(input("Whats your first name: "), input("Whats yout last name: ")))
+
+length = len(format_name)
