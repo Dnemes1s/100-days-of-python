@@ -13,8 +13,8 @@ empty_dict = {} # same way as making an empty list but uses {} instead
 programming_dictionary["Bug"] = "A moth in your computer" # How to edit the value of a key in your dictionary
 
 for key in programming_dictionary:
-    print(key)    # This will only pring out the keys in the dictionary
+    print(key)    # This will only print out the keys in the dictionary
     print(programming_dictionary[key])  # Will print out for the value of the retreived key. Like used in ceaser cypher to call certain letters in the alphabet list  
 
 
-# programming_dictionary = {} # How to wipe a dictionary 
+# programming_dictionary = {} # How to wipe a dictionary
