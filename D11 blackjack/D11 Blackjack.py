@@ -46,7 +46,7 @@ while play:
 
 
     
-    hit_or_stand = input("What would you like to do ? (Hit or stand)").lower()
+    hit_or_stand = input("What would you like to do ? (Hit or stand)\n").lower()
     if hit_or_stand == 'hit':
 
 
