@@ -1,7 +1,7 @@
 import random
 
 def win_lose(player, comp):
-    if player and comp > 21:
+    if player and comp >= 21:
         print("No one wins\n")
         return False
 
@@ -19,8 +19,9 @@ def win_lose(player, comp):
 
     elif comp == 21:
         print("House hit black jack. You lose\n")
-        play = False
-        return play
+        return False
+    
+    return True
 
 print("Welcome to blackjack")
 print("Im sure you know the rules alredy, so lets get started")
@@ -60,9 +61,8 @@ while play:
         ph_sum = sum(player_hand)
         ch_sum = sum(computer_hand)
 
-        win_lose(ph_sum, ch_sum)
+        play = win_lose(ph_sum, ch_sum)
 
-        play = win_lose
         
 
 
