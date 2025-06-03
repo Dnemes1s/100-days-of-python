@@ -1,16 +1,17 @@
 import random
 
 def win_lose(player, comp):
-    if player and comp >= 21:
-        print("No one wins\n")
-        return False
 
-    elif player > 21:
+    if player > 21:
         print("You bust. House wins\n")
         return False
 
     elif comp > 21:
         print("You win. House bust\n")
+        return False
+
+    elif player and comp >= 21:
+        print("No one wins\n")
         return False
 
     elif player == 21:
@@ -28,22 +29,19 @@ print("Im sure you know the rules alredy, so lets get started")
 
 play = True
 round = 0
-player_hand = []
-computer_hand = []
+player_hand = [random.randint(1,11),random.randint(1,11)]
+computer_hand = [random.randint(1,11),random.randint(1,11)]
 
-card_player = random.randint(1,11)
-card_comp = random.randint(1,11)
-
-player_hand.append(card_player)
-computer_hand.append(card_comp)
-ph_sum = int()
-ch_sum = int()
+ph_sum = int(player_hand[0] + player_hand[1])
+ch_sum = int(computer_hand[1])
+ch_sum_check = (computer_hand[0] + computer_hand[1])
 
 while play:
     print("Current  cards")
     print("")
-    print(f"{player_hand} {ph_sum}")
-    print(f"{computer_hand} {ch_sum}")
+    print(f"your hand is: {player_hand} total = {ph_sum}")
+    print(f"Computers hand is: [* {computer_hand[1:]}] total = {ch_sum}")
+    print(f"{computer_hand} {ch_sum_check}")
 
 
     
@@ -62,8 +60,18 @@ while play:
         ch_sum = sum(computer_hand)
 
         play = win_lose(ph_sum, ch_sum)
+    
+    else:
+        card_comp = random.randint(1,11)
+        computer_hand.append(card_comp)
 
-        
+        ph_sum = sum(player_hand)
+        ch_sum = sum(computer_hand)
+
+        play = win_lose(ph_sum, ch_sum)
+
+print(f"Your final cards: {player_hand} {ph_sum}")
+print(f"Computer final cards: {computer_hand} {ch_sum}")
 
 
 
