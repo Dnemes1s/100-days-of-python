@@ -61,7 +61,7 @@ while play:
 
         play = win_lose(ph_sum, ch_sum)
     
-    else:
+    elif hit_or_stand == 'stand':
         card_comp = random.randint(1,11)
         computer_hand.append(card_comp)
 
@@ -69,6 +69,9 @@ while play:
         ch_sum = sum(computer_hand)
 
         play = win_lose(ph_sum, ch_sum)
+
+    else:
+        print("Invalid input")
 
 print(f"Your final cards: {player_hand} {ph_sum}")
 print(f"Computer final cards: {computer_hand} {ch_sum}")
