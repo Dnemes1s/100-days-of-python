@@ -59,12 +59,12 @@ while play:
         ph_sum = sum(player_hand)
         ch_sum = sum(computer_hand)
 
-        if ch_sum >= 21:
-            if 11 in player_hand:
-                conv = player_hand.index(11)
-                print(conv)
-                player_hand[conv] = 1
-                print(sum(player_hand))
+    if ch_sum >= 21:
+        if 11 in player_hand:
+            conv = player_hand.index(11)
+            print(conv)
+            player_hand[conv] = 1
+            print(sum(player_hand))
         ph_sum = sum(player_hand)
         play = win_lose(ph_sum, ch_sum)
     
